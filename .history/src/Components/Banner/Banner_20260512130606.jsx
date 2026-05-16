@@ -5,10 +5,10 @@ const Banner = () => {
     return (
 
         <div className="hero bg-base-300 mt-6 h-70px">
-  <div className="hero-content flex-col lg:flex-row-reverse justify-between">
+  <div className="hero-content flex-col lg:flex-row-reverse justify-between gap-4">
     <img
       src={bookImage}
-      className="max-w-sm rounded-lg shadow-2xl"
+      className="max-w-sm rounded-lg shadow-2xl "
     />
     <div>
       <h1 className="text-2xl font-bold">Books to freshen up<br /> your bookshelf </h1>
