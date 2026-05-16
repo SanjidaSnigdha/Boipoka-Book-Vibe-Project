@@ -7,7 +7,6 @@ import ErrorPage from '../Pages/Root/ErrorPage/ErrorPage';
 import { Component } from 'react';
 import Home from '../Pages/Home/Home';
 import About from '../Pages/About/About';
-import BookDetails from '../Pages/BookDetails/BookDetails';
 
  export const router = createBrowserRouter([
   {
@@ -25,10 +24,6 @@ import BookDetails from '../Pages/BookDetails/BookDetails';
     {
       path:'/about',
       Component: About
-    },
-    {
-      path: '/bookDetails/:id',
-      Component: BookDetails
     }
   ],
 },
