@@ -30,8 +30,7 @@ import ReadList from '../Pages/ReadList/ReadList';
 
     {
       path: 'readList',
-       loader: ()=>fetch('booksData.json'),
-       Component : ReadList
+      Component : ReadList
     },
     {
       path: '/bookDetails/:id',
