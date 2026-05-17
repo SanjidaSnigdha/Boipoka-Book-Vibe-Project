@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLoaderData, useParams } from 'react-router';
-import { addToStoreDB, addWishBookToStoreDB } from '../Utility/addToDB';
+import { addToStoreDB } from '../Utility/addToDB';
 
 const BookDetails = () => {
     const {id} = useParams();

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLoaderData, useParams } from 'react-router';
-import { addToStoreDB, addWishBookToStoreDB } from '../Utility/addToDB';
+import { addToStoreDB } from '../Utility/addToDB';
 
 const BookDetails = () => {
     const {id} = useParams();
@@ -21,7 +21,7 @@ const BookDetails = () => {
     }
 
     const handleAddToWishList = id=>{
-        addWishBookToStoreDB(id)
+        addToStoreDB(id)
     }
     return (
         <div className='w-11/12 mx-auto flex justify-between mt-15 mb-15 gap-15'>

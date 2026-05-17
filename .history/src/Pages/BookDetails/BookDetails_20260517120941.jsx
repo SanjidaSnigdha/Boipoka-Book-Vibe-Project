@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLoaderData, useParams } from 'react-router';
-import { addToStoreDB, addWishBookToStoreDB } from '../Utility/addToDB';
+import { addToStoreDB } from '../Utility/addToDB';
 
 const BookDetails = () => {
     const {id} = useParams();
@@ -18,10 +18,6 @@ const BookDetails = () => {
 
         addToStoreDB(id)
 
-    }
-
-    const handleAddToWishList = id=>{
-        addWishBookToStoreDB(id)
     }
     return (
         <div className='w-11/12 mx-auto flex justify-between mt-15 mb-15 gap-15'>
@@ -52,7 +48,7 @@ const BookDetails = () => {
          
          <div className='mt-4'>
             <button onClick={()=>handleMarkAsRead(id)} className='btn btn-accent m-2'>Mar as Read</button>
-            <button onClick={()=>handleAddToWishList(id)} className='btn btn-info m-2'>Add to WishList</button>
+            <button className='btn btn-info m-2'>Add to WishList</button>
          </div>
            </div>
         </div>
