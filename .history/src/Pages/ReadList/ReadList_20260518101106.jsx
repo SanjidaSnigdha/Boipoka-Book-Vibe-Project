@@ -13,7 +13,7 @@ const ReadList = () => {
      const [sort, setSort] = useState('');
 
     const data = useLoaderData();
-
+    console.log(data)
 
    useEffect(() =>{
        const storedBookData= getStoreBook();
@@ -23,15 +23,6 @@ const ReadList = () => {
    },[])
    const handleSort = (type) =>{
     setSort(type)
-    if(type==="pages") {
-        const sortedByPage= [...readList].sort((a,b)=>a.totalPages - b.totalPages);
-        setReadList(sortedByPage)
-        console.log(sortedByPage)
-    }
-    if(type==="ratings") {
-        const sortedByrating = [...readList].sort((a,b) =>a.rating - b.rating);
-        setReadList(sortedByrating)
-    }
    }
 
     return (

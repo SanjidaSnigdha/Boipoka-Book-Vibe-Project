@@ -63,7 +63,6 @@ const BookDetails = () => {
             <p className='text-[#131313]70'>Year of Publishing: <span className='font-semibold text-[#131313]'>{yearOfPublishing}</span></p>
             <p className='text-[#131313]70'>Rating: <span className='font-semibold text-[#131313]'>{rating}</span></p>
           </div>
-          <ToastContainer></ToastContainer>
          
          <div className='mt-4'>
             <button onClick={()=>handleMarkAsRead(id)} className='btn btn-accent m-2'>Mar as Read</button>

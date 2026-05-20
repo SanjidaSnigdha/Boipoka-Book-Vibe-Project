@@ -5,9 +5,6 @@ import { addToStoreDB, addWishBookToStoreDB } from '../Utility/addToDB';
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
 
-  import { ToastContainer, toast } from 'react-toastify';
-
-
 const MySwal = withReactContent(Swal)
 
 const BookDetails = () => {
@@ -23,13 +20,16 @@ const BookDetails = () => {
         // if book already exist the show an alert
         // if book not exist then push in the collection or array
 
-//  MySwal.fire({
-//   title: "Good job!",
-//   text: "You clicked the button!",
-//   icon: "success"
-// });
-         
-        toast("Wow so easy!")
+        MySwal.fire({
+  title: <p>Hello World</p>,
+  didOpen: () => {
+    // `MySwal` is a subclass of `Swal` with all the same instance & static methods
+    MySwal.showLoading()
+  },
+}).then(() => {
+  return MySwal.fire(<p>Shorthand works too</p>)
+})
+
         addToStoreDB(id)
 
     }
@@ -63,7 +63,6 @@ const BookDetails = () => {
             <p className='text-[#131313]70'>Year of Publishing: <span className='font-semibold text-[#131313]'>{yearOfPublishing}</span></p>
             <p className='text-[#131313]70'>Rating: <span className='font-semibold text-[#131313]'>{rating}</span></p>
           </div>
-          <ToastContainer></ToastContainer>
          
          <div className='mt-4'>
             <button onClick={()=>handleMarkAsRead(id)} className='btn btn-accent m-2'>Mar as Read</button>
